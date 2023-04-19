@@ -1,10 +1,10 @@
 import { getProductByCategory, getProducts } from "../../hooks/asyncMock"
 import { useEffect, useState } from "react"
 
-import ItemList from "../ItemList/ItemList"
+import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 
-const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
 
@@ -27,4 +27,3 @@ const ItemListContainer = ({greeting}) => {
         </div>
     )
 }
-export default ItemListContainer

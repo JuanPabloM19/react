@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
 
-import CartWidget from "../CartWidget/CartWidget"
+import { CartWidget } from "../CartWidget/CartWidget"
 import logo from "../../Utils/img/logo.png"
 
-const NavBar = () => {
+export const NavBar = () => {
     return(
         <nav className="Navbar">
             <Link to='/'>
@@ -17,4 +17,3 @@ const NavBar = () => {
         </nav>
 )    
 }
-export default NavBar

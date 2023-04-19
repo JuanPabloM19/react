@@ -1,6 +1,6 @@
-import ItemCount from "../ItemCount/ItemCount";
+import {ItemCount} from "../ItemCount/ItemCount";
 
-const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+export const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     return(
         <article className="CardItem">
             <header className="Header">
@@ -28,5 +28,3 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
         </article>
     )
 }
-
-export default ItemDetail

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Item = ({id,name,img,price,stock}) => {
+export const Item = ({id,name,img,price,stock}) => {
     return (
         <article className="CardItem">
             <header className="Header">
@@ -25,5 +25,3 @@ const Item = ({id,name,img,price,stock}) => {
         </article>
     )
 }
-
-export default Item

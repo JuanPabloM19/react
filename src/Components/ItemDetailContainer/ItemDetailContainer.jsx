@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import ItemDetail from "../ItemDetail/ItemDetail";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { getProductById } from "../../hooks/asyncMock";
 import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = () => {
+export const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
 
     const {itemId} = useParams()
@@ -25,5 +25,3 @@ const ItemDetailContainer = () => {
         </div>
     )
 }
-
-export default ItemDetailContainer
