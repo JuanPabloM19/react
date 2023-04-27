@@ -1,29 +1,32 @@
-import { getProductByCategory, getProducts } from "../../hooks/asyncMock"
 import { useEffect, useState } from "react"
 
-import { ItemList } from "../ItemList/ItemList"
+import {ItemList} from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 
-export const ItemListContainer = ({greeting}) => {
-    const [products, setProducts] = useState([])
-    const {categoryId} = useParams()
+export const ItemListContainer = () => {
+  const [productos, setProductos] = useState([])
+  const {category} = useParams()
 
-    useEffect(() => {
-        const asyncFunc = categoryId ? getProductByCategory : getProducts
-        
-        asyncFunc(categoryId)
-            .then(response => {
-                setProducts(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    },[categoryId])
-
-    return(
-        <div>
-            <h1>{greeting}</h1>
-            <ItemList> products = {products}</ItemList>
-        </div>
-    )
+  useEffect(() => {
+    if (category){
+      fetch('../json/productos.json')
+      .then(response => response.json())
+      .then(productos => {
+        const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === (category))
+        setProductos(productosFiltrados)
+      })  
+    }else{
+      fetch('/json/productos.json')
+      .then(response => response.json())
+      .then(productos => {
+        const productosFiltrados = productos.filter(prod => prod.stock > 0)
+        setProductos(productosFiltrados)
+      })
+    }
+  }, [category])
+  return (
+    <div>
+      {<ItemList productos={productos} />}
+    </div>
+  )
 }

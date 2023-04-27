@@ -1,27 +1,21 @@
 import { Link } from "react-router-dom"
 
-export const Item = ({id,name,img,price,stock}) => {
-    return (
-        <article className="CardItem">
-            <header className="Header">
-                <h2 className="ItemHeader">
-                    {name}
-                </h2>
-            </header>
-            <picture>
-                <img src={img} alt={name} className="ItemImg"></img>
-            </picture>
-            <section>
-                <p className="Info">
-                    Precio: ${price}
-                </p>
-                <p className="Info">
-                    Stock disponible: {stock}
-                </p>
-            </section>
-            <footer className="ItemFooter">
-                <Link to={`/item/${id}`} className="Option">Ver detalles</Link>
-            </footer>
-        </article>
-    )
+export const Item = ({ item }) => {
+        return (
+            <div className="card container d-flex flex-col h-100">
+            <div className="col-md-12">
+                <div className="card-body">
+                    <h3 className="card-title">{item.nombre}</h3>
+                    <img src={item.img} alt={item.name} className="img-fluid round-start card-img-top"/>
+                    <p className="card-text">Color: {item.color}</p>
+                    <p className="card-text">Precio: ${item.precio}</p>
+                    <p className="card-text">Stock: {item.stock}</p>
+                    <Link className='nav-link' to={`/product/${item.id}`}><button className="btn btn-dark">Ver Producto</button></Link>
+                </div>
+            </div>
+        </div>
+        )
 }
+
+
+

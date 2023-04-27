@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+        "nombre":"HyperX",
+        "precio":5000,
+        "categoria":"auriculares",
+        "img":"/src/Utils/img/auriculares.jpg",
+        "color":"NEGRO, BLANCO",
+        "descripcion":"El formato perfecto para vos. El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo, su sonido envolvente del más alto nivel se convierte en el protagonista de la escena.",
+        "stock":100
+    },
+    {
+        "id":"2",
+        "nombre":"Sonido Samsung",
+        "precio":600,
+        "categoria":"auriculares",
+        "img":"/src/Utils/img/barrasonido.jpg",
+        "color":"NEGRO, GRIS",
+        "descripcion":"El sistema de parlantes incluido te ayudará a lograr el efecto que estás buscando. Ubicalos estratégicamente para que las ondas se proyecten en varias direcciones, logrando un sonido envolvente. Combiná las frecuencias agudas, graves y medias para experimentar un efecto acústico sin precedentes.",
+        "stock":100
+    },
+    {
+        "id":"3",
+        "nombre":"Monitor Samsung",
+        "precio":1000,
+        "categoria":"monitores",
+        "img":"/src/Utils/img/monitor.jpg",
+        "color":"NEGRO",
+        "descripcion":"Este monitor de 27 pulgadas te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 2560 x 1440 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad. Su tiempo de respuesta de un milisegundo lo hace ideal para gamers y cinéfilos porque es capaz de mostrar imágenes en movimiento sin halos o bordes borrosos.",
+        "stock":100
+    },
+    {
+        "id":"4",
+        "nombre":"PC Gamer",
+        "precio":6780,
+        "categoria":"pcArmadas",
+        "img":"/src/Utils/img/pcgamer.jpg",
+        "color":"NEGRO",
+        "descripcion":"-PROCESADOR INTEL CORE I5 10400 -MOTHER S1200 H510 -MEMORIA RAM DDR4 16GB 3200MHZ (EXPANDIBLE HASTA 64GB) -DISCO SOLIDO SSD SATA 480GB -PLACA DE VIDEO NVIDIA GTX 1650 4GB -FUENTE 600W REALES -GABINETE GAMER 1 COOLER RGB",
+        "stock":100
+    }
+]
