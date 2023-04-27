@@ -7,7 +7,7 @@ export const ItemDetailConatiner = () =>{
     const [item, setItem] = useState([])
     const {id} = useParams()
     useEffect(() => {
-        fetch('../json/productos.json')
+        fetch('../productos.json')
         .then(response => response.json())
         .then (productos => {
             const prod = productos.find(prod => prod.id === (id))

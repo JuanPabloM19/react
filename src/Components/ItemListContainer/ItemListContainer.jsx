@@ -9,14 +9,14 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     if (category){
-      fetch('../json/productos.json')
+      fetch('../productos.json')
       .then(response => response.json())
       .then(productos => {
         const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === (category))
         setProductos(productosFiltrados)
       })  
     }else{
-      fetch('/json/productos.json')
+      fetch('../productos.json')
       .then(response => response.json())
       .then(productos => {
         const productosFiltrados = productos.filter(prod => prod.stock > 0)
