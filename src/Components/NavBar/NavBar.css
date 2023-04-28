@@ -1,0 +1,33 @@
+/* Estilos personalizados */
+.navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #eee;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar-expand-lg .navbar-toggler {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  
