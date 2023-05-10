@@ -6,10 +6,20 @@
   .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease-in-out;
+    color: black !important;
   }
   
   .navbar-nav .nav-link:hover {
-    background-color: #eee;
+    background-color: black;
+    color: black !important;
+  }
+
+  .dropdown-item .dropdown-menu{
+    color: black !important;
+  }
+
+  p li ul{
+    color: black !important;
   }
   
   /* Ajustes para pantallas pequeñas */
@@ -28,6 +38,7 @@
     .navbar-nav .nav-link {
       padding: 1rem;
       border-bottom: 1px solid #ddd;
+      color: black !important;
     }
   }
   
