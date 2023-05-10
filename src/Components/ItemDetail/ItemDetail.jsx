@@ -1,13 +1,12 @@
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useCarritoContext } from "../../Context/CartContext";
-import { useContext } from "react";
 import { useState } from "react";
 
 export const ItemDetail = ({ item }) => {
   const [quantityAdded, setQuantityAdded] = useState(0)
 
-  const {addItem} = useContext(useCarritoContext)
+  const {addItem} = useCarritoContext()
 
   const handleOnAdd = (quantity) => {
     setQuantityAdded(quantity)

@@ -1,4 +1,4 @@
-import {addDoc, collection, deleteDoc, doc, getDoc, getDocs, getFirestore, updateDoc} from "firebase/firestore"
+import {addDoc, collection, deleteDoc, doc, getDoc, getDocs, getFirestore, query, updateDoc, where} from "firebase/firestore"
 
 import { initializeApp } from "firebase/app";
 
@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db=getFirestore(app)
+export const db = getFirestore(app)
 
 export const createProducts = async () =>{
   const promise = await fetch('./json/productos.json')
@@ -32,8 +32,9 @@ export const createProducts = async () =>{
   })
 }
 
-export const getProducts = async () => {
-  const prods = await getDocs(collection(db, "productos"))
+export const getProducts = async (category) => {
+  const data = category ? query(collection(db, "productos"), where("categoria", "==", category)): collection(db, "productos")
+  const prods = await getDocs(data)
   const items = prods.docs.map(prod => {
       return { ...prod.data(), id: prod.id }
   })
