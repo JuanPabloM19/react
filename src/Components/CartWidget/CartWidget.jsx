@@ -1,10 +1,17 @@
-import cart from './assets/cart1.png'
+import { Link } from "react-router-dom"
+import { useCarritoContext } from "../../Context/CartContext.js"
 
-export default function CartWidget() {
-    return (
-      <div>
-      <img src={cart} alt="cartWidget" />0
-          </div>
-    )
-  }
-  
+export const CartWidget = () => {
+  const { getItemQuantity } = useCarritoContext()
+  return (
+    <>
+      <button className="btn btn-dark cartWidget">
+        <Link to={"/cart"} className="nav-link carro">
+          <img src="./assets/cart1.png" alt="cartWidget" width="50"/>0
+          {getItemQuantity() > 0 && <span className="cantCarrito">{getItemQuantity()}</span>}
+        </Link>
+      </button>
+
+    </>
+  )
+}

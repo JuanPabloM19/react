@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react"
 
-import {ItemDetail} from "../ItemDetail/ItemDetail"
+import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { getProduct } from "../../Firebase/Firebase.js"
 import { useParams } from "react-router-dom"
 
-export const ItemDetailConatiner = () =>{
+export const ItemDetailContainer = () => {
+
     const [item, setItem] = useState([])
-    const {id} = useParams()
+    const { id } = useParams()
+
     useEffect(() => {
-        fetch('../productos.json')
-        .then(response => response.json())
-        .then (productos => {
-            const prod = productos.find(prod => prod.id === (id))
-            setItem(prod)
-        })
+        getProduct(id).then(prod => setItem(prod))
+
     }, [id])
+
     return(
         <div>
             <ItemDetail item={item}/>

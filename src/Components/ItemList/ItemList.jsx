@@ -1,9 +1,17 @@
-import {Item}  from "../Item/Item"
+import { Item } from "../Item/Item"
+import { ItemCart } from "../ItemCart/ItemCart"
 
-export const ItemList = ({ productos }) => {
-        return (
-            <div className="row gap-5 column-gap-3 m-4">
-                {productos.map(producto => <Item key={producto.id} item={producto} />)}
-            </div>
-        )
+export const ItemList = ({ productos, plantilla }) => {
+    return (
+        <>
+            {
+                plantilla === "Item"
+                    ?
+                    productos.map(productos => <Item key={productos.id} item={productos} />)
+                    :
+                    productos.map(producto => <ItemCart key={producto.id} item={producto} />)
+            }
+
+        </>
+    )
 }
