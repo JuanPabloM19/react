@@ -51,6 +51,7 @@ export const Checkout = () => {
                     draggable: false,
                     progress: undefined,
                     theme: "dark",
+                    
                 });
                 emptyCart()
                 e.target.reset()

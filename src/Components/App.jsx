@@ -10,7 +10,6 @@ import {ItemDetailContainer} from './ItemDetailContainer/ItemDetailContainer'
 import { ItemListContainer } from "./ItemListContainer/ItemListContainer";
 import { NavBar } from "./NavBar/NavBar";
 import { ToastContainer } from 'react-toastify';
-import { createProducts } from "../Firebase/Firebase";
 
 export const App = () => {
   return (
